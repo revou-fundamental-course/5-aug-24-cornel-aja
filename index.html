@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Calculator -->
+
+        <section id="calculator-section">
+            <h1>BMI Calculator</h1>
+            <p>Welcome to the BMI Calculator! Please fill in your gender, weight, age, and height to determine your body mass index (BMI).</p>
+
+            <form id="bmi-form">
+
+                <fieldset>
+                    <legend>Calculator</legend>
+
+                    <!-- Gender -->
+                    <label for="gender-male">
+                        <input type="radio" id="gender-male" name="gender" value="male" checked> Male
+                    </label>
+                    <label for="gender-female">
+                        <input type="radio" id="gender-female" name="gender" value="female"> Female
+                    </label>
+
+                    <br><br>
+
+                    <!-- Age -->
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                    <div id="ageErrorMessage" class="error-message"></div>
+                    
+
+
+                    <br>
+
+                    <!-- Weight -->
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight" required>
+                    <div id="weightErrorMessage" class="error-message"></div>
+
+                    <br>
+
+                    <!-- Height -->
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" name="height" required>
+                    <div id="heightErrorMessage" class="error-message"></div>
+
+                    <br>
+
+                    <!-- Buttons -->
+                    <button type="button" id="calculate-btn" onclick="calculateBMI()">Calculate</button>
+                    <button type="reset" id="reset-btn">Reset</button>
+
+                </fieldset>
+
+            </form>
+
+            <p>This calculator will give you an overview of how your body weight compares to general values. The Body Mass Index (BMI) is calculated as your weight (in kilograms) divided by the square of your height (in meters).</p>
+
+            <p>This calculator is intended for use by adults only (pregnant or breastfeeding women should not rely on this BMI reading), and no actions should be taken based on the result without first consulting a qualified professional, such as a doctor.</p>
+
+        </section> 
+        
+        
+        <!-- Result -->
+
+        <section id="result-section">
+            <fieldset>
+                <legend>Result</legend>
+                <h2>Your BMI Result</h2>
+                <p id="result-display" class="bmi-result"></p>
+                <p id="result-description" class="bmi-description"></p>
+                <p id="result-advice" class="bmi-advice"></p>
+            </fieldset>        
+        </section>
+
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
